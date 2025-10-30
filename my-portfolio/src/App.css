@@ -1,0 +1,152 @@
+/* Global */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root{
+  --primary: #0d6efd;
+  --accent: #6c63ff;
+  --bg-dark: #0a192f;
+  --bg-alt: #112240;
+  --text-light: #ccd6f6;
+  --muted: #8892b0;
+  --highlight: #64ffda;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  -webkit-font-smoothing:antialiased;
+  scroll-behavior: smooth;
+}
+
+/* NAVBAR z-index to not overlap titles */
+.navbar {
+  background-color: rgba(10,25,47,0.92);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+}
+
+/* SECTION: full viewport, content below top-title */
+section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* place content below the title */
+  padding: 140px 20px 60px; /* top padding pushes content below absolute title + navbar */
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* SECTION TITLE: centered at top-middle */
+.section-title {
+  position: absolute;
+  top: 24px;                 /* distance from top of viewport */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9000;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 6px 18px;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--highlight);
+  box-shadow: none;
+  text-align: center;
+}
+
+/* Make titles more visible on light section (certificates) */
+#certifications .section-title {
+  color: var(--primary);
+  background: rgba(255,255,255,0.06);
+}
+
+/* Colors for each section */
+#home { background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); color: #ffffff; }
+#about { background-color: var(--bg-dark); color: var(--text-light); }
+#education { background-color: var(--bg-alt); color: var(--text-light); }
+#skills { background-color: var(--bg-dark); color: var(--text-light); }
+#certifications { background-color: #ffffff; color: var(--bg-dark); } /* light bg for certs */
+#projects { background-color: var(--bg-alt); color: var(--text-light); }
+#contact { background-color: var(--bg-dark); color: var(--text-light); }
+
+/* Hero specifics */
+.hero-content { text-align: center; margin-top: 20px; }
+.hero-content h1 { font-size: 2.6rem; margin: 8px 0; color: #fff; }
+.hero-content h2 { font-size: 1.2rem; margin: 6px 0; color: rgba(255,255,255,0.9); }
+.hero-btn {
+  margin-top: 20px;
+  background-color: var(--highlight);
+  color: var(--bg-dark);
+  border: none;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Container adjustments (center content, not too wide) */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Cards */
+.card {
+  background-color: #0f2340;
+  border: none;
+  color: var(--text-light);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.card-hover:hover { transform: translateY(-8px); box-shadow: 0 10px 30px rgba(0,0,0,0.45); }
+
+/* Education / Card visuals */
+.edu-card { border-left: 4px solid var(--primary); border-radius: 8px; padding: 18px; }
+
+/* Skills bars */
+.skill-bar { background: #0c2239; border-radius: 999px; overflow: hidden; height: 18px; margin-top: 8px; }
+.skill-fill { height: 100%; background: linear-gradient(90deg,var(--primary),var(--accent)); width: 0; transition: width 1.6s ease; }
+
+/* Certifications: special contrast (image on white bg) */
+#certifications { color: var(--bg-dark); }
+.cert-img { max-width: 260px; border-radius: 8px; cursor: pointer; transition: transform .25s ease, box-shadow .25s ease; }
+.cert-img:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 12px 30px rgba(15,34,64,0.18); }
+
+/* Projects / image zoom helper */
+.image-hover-zoom { transition: transform .35s ease, box-shadow .35s ease; }
+.image-hover-zoom:hover { transform: scale(1.03); }
+
+/* Scroll button */
+.scroll-btn {
+  position: fixed;
+  bottom: 26px;
+  right: 26px;
+  background: var(--highlight);
+  color: var(--bg-dark);
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  z-index: 9999;
+}
+
+/* Small screens adjustments */
+@media (max-width: 768px) {
+  .section-title { font-size: 1.1rem; top: 18px; padding: 6px 12px; }
+  section { padding: 120px 16px 60px; }
+  .hero-content h1 { font-size: 1.8rem; }
+}
+
+/* animations.css class references (in case used) */
+.fade-in { animation: fadeInUp .9s ease forwards; }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(14px);} to { opacity:1; transform: translateY(0);} }
