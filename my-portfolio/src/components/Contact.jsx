@@ -28,25 +28,43 @@ function Contact() {
   };
 
   return (
-    <section id="contact">
-      <h2 className="section-title text-center">Contact</h2>
-      <div className="container mt-4 d-flex justify-content-center">
+    <section
+      id="contact"
+      style={{
+        background: "linear-gradient(135deg, #4B0082, #6A0DAD)", // Same gradient as Hero
+        color: "white",
+        padding: "80px 20px",
+        textAlign: "center",
+      }}
+    >
+      <h2
+        className="section-title"
+        style={{
+          color: "#FFD700", // Gold heading like Hero
+          marginBottom: "40px",
+        }}
+      >
+        Contact
+      </h2>
+
+      <div className="container d-flex justify-content-center">
         <form
           ref={form}
           onSubmit={sendEmail}
           style={{
             maxWidth: "600px",
             width: "100%",
-            backgroundColor: "#0a0a23",
+            backgroundColor: "rgba(255, 255, 255, 0.1)", // translucent card
             padding: "30px",
-            borderRadius: "12px",
-            boxShadow: "0 4px 15px rgba(0, 0, 0, 0.3)",
+            borderRadius: "15px",
+            boxShadow: "0 6px 20px rgba(0,0,0,0.3)",
+            border: "2px solid #FFD700", // gold border
           }}
         >
-          <div className="mb-3">
+          <div className="mb-3 text-start">
             <label
               htmlFor="user_name"
-              style={{ color: "#64ffda", fontWeight: "bold" }}
+              style={{ color: "#FFD700", fontWeight: "bold" }}
             >
               Name
             </label>
@@ -59,18 +77,18 @@ function Contact() {
                 width: "100%",
                 padding: "10px",
                 borderRadius: "6px",
-                border: "1px solid #64ffda",
-                backgroundColor: "#0f172a",
+                border: "1px solid #FFD700",
+                backgroundColor: "rgba(255,255,255,0.2)",
                 color: "white",
                 marginTop: "6px",
               }}
             />
           </div>
 
-          <div className="mb-3">
+          <div className="mb-3 text-start">
             <label
               htmlFor="user_email"
-              style={{ color: "#64ffda", fontWeight: "bold" }}
+              style={{ color: "#FFD700", fontWeight: "bold" }}
             >
               Email
             </label>
@@ -83,18 +101,18 @@ function Contact() {
                 width: "100%",
                 padding: "10px",
                 borderRadius: "6px",
-                border: "1px solid #64ffda",
-                backgroundColor: "#0f172a",
+                border: "1px solid #FFD700",
+                backgroundColor: "rgba(255,255,255,0.2)",
                 color: "white",
                 marginTop: "6px",
               }}
             />
           </div>
 
-          <div className="mb-3">
+          <div className="mb-3 text-start">
             <label
               htmlFor="message"
-              style={{ color: "#64ffda", fontWeight: "bold" }}
+              style={{ color: "#FFD700", fontWeight: "bold" }}
             >
               Message
             </label>
@@ -107,8 +125,8 @@ function Contact() {
                 width: "100%",
                 padding: "10px",
                 borderRadius: "6px",
-                border: "1px solid #64ffda",
-                backgroundColor: "#0f172a",
+                border: "1px solid #FFD700",
+                backgroundColor: "rgba(255,255,255,0.2)",
                 color: "white",
                 marginTop: "6px",
                 resize: "none",
@@ -119,17 +137,26 @@ function Contact() {
           <button
             type="submit"
             style={{
-              backgroundColor: "#64ffda",
-              color: "#0a0a23",
+              backgroundColor: "#FFD700",
+              color: "#4B0082",
               fontWeight: "bold",
-              padding: "10px 20px",
+              padding: "12px 30px",
               border: "none",
-              borderRadius: "6px",
+              borderRadius: "8px",
               cursor: "pointer",
               transition: "all 0.3s ease",
+              fontSize: "1rem",
             }}
-            onMouseOver={(e) => (e.target.style.backgroundColor = "#4cd3b3")}
-            onMouseOut={(e) => (e.target.style.backgroundColor = "#64ffda")}
+            onMouseOver={(e) => {
+              e.target.style.backgroundColor = "#fff";
+              e.target.style.color = "#4B0082";
+              e.target.style.boxShadow = "0 6px 15px rgba(0,0,0,0.3)";
+            }}
+            onMouseOut={(e) => {
+              e.target.style.backgroundColor = "#FFD700";
+              e.target.style.color = "#4B0082";
+              e.target.style.boxShadow = "none";
+            }}
           >
             Send Message
           </button>

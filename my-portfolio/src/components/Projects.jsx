@@ -26,8 +26,23 @@ const projects = [
 
 function Projects() {
   return (
-    <section id="projects">
-      <h2 className="section-title">Projects</h2>
+    <section
+      id="projects"
+      style={{
+        background: "linear-gradient(135deg, #4B0082, #6A0DAD)", // same gradient as Hero
+        color: "white",
+        padding: "60px 0",
+      }}
+    >
+      <h2
+        className="section-title text-center"
+        style={{
+          color: "#FFD700", // gold accent for title
+        }}
+      >
+        Projects
+      </h2>
+
       <div
         className="container d-flex justify-content-center flex-wrap mt-4"
         style={{ gap: 20 }}
@@ -45,17 +60,43 @@ function Projects() {
               style={{
                 width: 300,
                 cursor: "pointer",
+                backgroundColor: "rgba(255, 255, 255, 0.1)", // transparent card
+                border: "2px solid #FFD700", // gold border
+                borderRadius: "15px",
                 transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                boxShadow: "0 4px 10px rgba(0,0,0,0.3)",
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.transform = "scale(1.05)";
+                e.currentTarget.style.boxShadow = "0 8px 20px rgba(0,0,0,0.4)";
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.transform = "scale(1)";
+                e.currentTarget.style.boxShadow = "0 4px 10px rgba(0,0,0,0.3)";
               }}
             >
               <img
                 src={p.img}
                 alt={p.title}
                 className="card-img-top image-hover-zoom"
+                style={{
+                  borderTopLeftRadius: "15px",
+                  borderTopRightRadius: "15px",
+                }}
               />
               <div className="card-body">
-                <h5 className="card-title">{p.title}</h5>
-                <p className="card-text">{p.desc}</p>
+                <h5
+                  className="card-title"
+                  style={{ color: "#FFD700", fontWeight: "bold" }}
+                >
+                  {p.title}
+                </h5>
+                <p
+                  className="card-text"
+                  style={{ color: "white", textAlign: "justify" }}
+                >
+                  {p.desc}
+                </p>
               </div>
             </div>
           </a>
