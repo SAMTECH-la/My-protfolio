@@ -1,7 +1,7 @@
 import React from "react";
 import project1 from "../assets/project1.PNG";
-import project2 from "../assets/project2.PNG";
-import project3 from "../assets/project3.PNG";
+/*import project2 from "../assets/project2.PNG";
+import project3 from "../assets/project3.PNG";*/
 
 const projects = [
   {
@@ -11,17 +11,12 @@ const projects = [
     link: "https://incomparable-semolina-d3b092.netlify.app/",
   },
   {
-    title: "Temperature Converter",
-    desc: "An interactive temperature converter that allows users to convert between Celsius, Fahrenheit, and Kelvin. Built using HTML, CSS, and JavaScript, featuring a soft gradient design and real-time conversion display.",
-    img: project2,
-    link: "https://incomparable-boba-ca42d1.netlify.app/",
-  },
-  {
-    title: "Smart Calculator",
-    desc: "A responsive web-based calculator built with HTML, CSS, and JavaScript. It performs basic arithmetic operations with a sleek modern UI and includes smooth hover effects. Designed to deliver a clean and intuitive user experience.",
-    img: project3,
-    link: "https://heartfelt-llama-903ffe.netlify.app/",
-  },
+    title: "Food Vendor Machine",
+    desc: "A full-stack Book Store Management System using PHP and MySQL. It allows users to browse, search, and purchase books online. The project features user authentication, a dynamic catalog, and a visually appealing frontend design.",
+    img: project1,
+    link: "https://incomparable-semolina-d3b092.netlify.app/",
+  }
+  
 ];
 
 function Projects() {
