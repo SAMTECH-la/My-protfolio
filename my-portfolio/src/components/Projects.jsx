@@ -1,7 +1,7 @@
-import React from "react";
+import project3 from "../assets/foodhub.PNG";
+import project4 from "../assets/novastudio.png";
 import project1 from "../assets/project1.PNG";
 import project2 from "../assets/project2.PNG";
-import project3 from "../assets/project3.PNG";
 
 const projects = [
   {
@@ -17,10 +17,16 @@ const projects = [
     link: "https://incomparable-boba-ca42d1.netlify.app/",
   },
   {
-    title: "Smart Calculator",
-    desc: "A responsive web-based calculator built with HTML, CSS, and JavaScript. It performs basic arithmetic operations with a sleek modern UI and includes smooth hover effects. Designed to deliver a clean and intuitive user experience.",
+    title: "Food Vending Machine Website (In Progress)",
+    desc: "I am building a Food Vending Machine website using React.js with a clean, responsive UI, dynamic food menu, and a simple add-to-cart system. The project is still in progress as I continue improving the design and functionality.",
     img: project3,
-    link: "https://heartfelt-llama-903ffe.netlify.app/",
+    link: "https://food-ordering-system-beta-wine.vercel.app/",
+  },
+  {
+    title: "NovaStudio – Modern Digital Agency Website (In Progress)",
+    desc: "A modern digital agency website showcasing services, process, and contact details, built with clean UI/UX and responsive layouts. The project is still in progress as I continue refining the design and overall experience.",
+    img: project4,
+    link: "https://nova-studio-eight.vercel.app/",
   },
 ];
 

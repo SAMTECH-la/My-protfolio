@@ -1,5 +1,4 @@
-import React from "react";
-import { Navbar as BsNavbar, Nav, Container } from "react-bootstrap";
+import { Navbar as BsNavbar, Container, Nav } from "react-bootstrap";
 
 function Navbar() {
   return (
@@ -49,7 +48,7 @@ function Navbar() {
               onMouseOver={(e) => (e.target.style.color = "#ffffff")}
               onMouseOut={(e) => (e.target.style.color = "#64ffda")}
             >
-              Certifications
+            Experience
             </Nav.Link>
             <Nav.Link
               href="#projects"
