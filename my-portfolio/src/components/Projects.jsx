@@ -1,5 +1,4 @@
 import project3 from "../assets/foodhub.PNG";
-import project4 from "../assets/novastudio.png";
 import project1 from "../assets/project1.PNG";
 import project2 from "../assets/project2.PNG";
 
@@ -17,17 +16,12 @@ const projects = [
     link: "https://incomparable-boba-ca42d1.netlify.app/",
   },
   {
-    title: "Food Vending Machine Website (In Progress)",
+    title: "Food Vending Machine Website",
     desc: "I am building a Food Vending Machine website using React.js with a clean, responsive UI, dynamic food menu, and a simple add-to-cart system. The project is still in progress as I continue improving the design and functionality.",
     img: project3,
     link: "https://food-ordering-system-beta-wine.vercel.app/",
   },
-  {
-    title: "NovaStudio – Modern Digital Agency Website (In Progress)",
-    desc: "A modern digital agency website showcasing services, process, and contact details, built with clean UI/UX and responsive layouts. The project is still in progress as I continue refining the design and overall experience.",
-    img: project4,
-    link: "https://nova-studio-eight.vercel.app/",
-  },
+  
 ];
 
 function Projects() {
