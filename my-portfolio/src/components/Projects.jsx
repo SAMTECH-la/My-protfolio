@@ -1,4 +1,5 @@
 import project3 from "../assets/foodhub.PNG";
+import nov from "../assets/novastudio.png";
 import project1 from "../assets/project1.PNG";
 import project2 from "../assets/project2.PNG";
 
@@ -20,6 +21,13 @@ const projects = [
     desc: "I am building a Food Vending Machine website using React.js with a clean, responsive UI, dynamic food menu, and a simple add-to-cart system. The project is still in progress as I continue improving the design and functionality.",
     img: project3,
     link: "https://food-ordering-system-beta-wine.vercel.app/",
+  },
+  {
+    title: "Novastudio Website",
+    desc: "A modern, responsive website for a fictional creative agency called Novastudio. Built with HTML, CSS, and JavaScript, featuring smooth animations, a portfolio showcase, and a contact form.",
+    img: nov,
+    link: "https://nova-studio-eight.vercel.app/",
+
   },
   
 ];
